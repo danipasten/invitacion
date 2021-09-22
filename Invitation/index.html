@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Invitación</title>
+	<link rel="stylesheet" href="main.css" />
+	<script src="scripts/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<div class="main-content">
+		<div class="palette__wrapper">
+			<div class="palette palette--one">
+				<div class="palette__cover">
+					<div class="name__container">
+						<div class="name_container">
+							<img class="estrella" src="images/estrella.png">
+						<p id="nombre" style="margin-top: 20px;"></p>
+						<p id="apellido"></p>
+						<img src="images/qr.jpg">
+						<p class="vip-text">VIP ALL ACCESS</p>
+						</div>
+					</div>
+				</div>				
+				<div class="palette__base">
+					<div class="invitation_container">
+						<div class="invitation__container">
+							<div class="left">
+								<img src="images/oscar.png">
+							</div>
+							<div class="right">
+								<p>
+									NO TE PIERDAS <br>QUIEN GANA
+								</p>
+								<br>
+								<img src="images/top.png">
+								<p class="title">
+									EN LA FIESTA<br>
+									DE LOS TRIGÉSIMOS<br>
+									ÓSCARES<br>
+									DE ANITA
+								</p>
+								<img src="images/bottom.png">
+								<br>
+								<p>
+									¡Disfruta de los Óscares con buena<br>
+									comida y bebidas!<br>
+									¡No olvides tu disfraz!<br><br>
+									2 de octubre de 2021 | 3:00 p.m.<br>
+									Irpavi 2. calle 2 esquina C #500<br><br><br>
+									Confirma tu asistencia
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>		
+	</div>
+ <script src="main.js"></script>	
+</body>
+</html>
+
+<script>
+	$( document ).ready(function() {
+    var input= window.location.href;
+		var fields = input.split('?');
+		var nombre=fields[1].split('-')[0];
+		var apellido=fields[1].split('-')[1];
+		console.dir(nombre);
+		console.dir(apellido);
+		document.getElementById("nombre").innerHTML=nombre;
+		document.getElementById("apellido").innerHTML=apellido;
+});
+</script>
